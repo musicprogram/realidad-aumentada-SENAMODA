@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Realidad aumentada</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/NyAs3Utils.js"></script>
+    <script src="js/FLARArrayUtil.js"></script>
+    <script src="js/FLARException.js"></script>
+    <script src="js/FLARMat.js"></script>
+    <script src="js/FLARRgbPixelReader.js"></script>
+    <script src="js/NyARHistogramAnalyzer.js"></script>
+    <script src="js/NyARPca2d.js"></script>
+    <script src="js/NyARRasterReader.js"></script>
+    <script src="js/NyARTypes.js"></script>
+    <script src="js/FLARRasterFilter.js"></script>
+    <script src="js/FLARTypes.js"></script>
+    <script src="js/NyARLabel.js"></script>
+    <script src="js/FLARLabeling.js"></script>
+    <script src="js/NyARParam.js"></script>
+    <script src="js/FLARParam.js"></script>
+    <script src="js/NyARRaster.js"></script>
+    <script src="js/FLARRaster.js"></script>
+    <script src="js/NyARCode.js"></script>
+    <script src="js/FLARCode.js"></script>
+    <script src="js/NyARMatch.js"></script>
+    <script src="js/NyARRasterAnalyzer.js"></script>
+    <script src="js/FLARRasterAnalyzer.js"></script>
+    <script src="js/NyARRasterFilter.js"></script>
+    <script src="js/NyARSquareDetect.js"></script>
+    <script src="js/FLARSquareDetect.js"></script>
+    <script src="js/NyARTransMat.js"></script>
+    <script src="js/FLARTransMat.js"></script>
+    <script src="js/NyARUtils.js"></script>
+    <script src="js/NyARIdMarker.js"></script>
+    <script src="js/NyARPickup.js"></script>
+    <script src="js/FLARProcessor.js"></script>
+    <script src="js/NyARDetector.js"></script>
+    <script src="js/FLARDetector.js"></script>
+    <script src="js/FLARIdMarkerDetector.js"></script>
+    <script src="js/NyARSingleMarkerProcesser.js"></script>
+    <script src="js/NyUtils.js"></script>
+    <script src="js/magi.js"></script>
+    
+    <style>
+      html {
+        background: #f2f2f2;
+        color: black;
+        font-style: arial;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        margin-top: 20px;
+        text-align: center;
+      }
+      #loading {
+        font-size: 30px;
+        font-weight: bold;
+      }
+      canvas{
+        padding: 10px 10px 10px 10px;
+      }
+      .sep{
+        padding: 5px 0px 5px 0px;
+      }
+    </style>
+  </head>
+  
+  <body>
+  
+  <div class="container">
+    <img class="img-responsive sep" src="images/baner.gif"></img>
+  </div>
+    
+  
+    <script>
+
+        dirfotos=[
+        "images/1_Ojaladora.jpg",
+        "images/2_Plana.jpg",
+        "images/3_Recubridora.jpg",
+        "images/4_Fileteadora.jpg",
+        "images/5_Botonadora.jpg",
+        "images/6_Fileteadora2.jpg",
+        "images/7_CortadoraCNC.png",
+        "images/8_Extendedora.jpg",
+        "images/9_TejedoraUnCabezal.jpg",
+        "images/10_Banda.jpg",
+        "images/11_Aguja.jpg",
+        "images/12_Hilo.jpg",
+        "images/13_Bordadora.jpg",
+        "images/14_Pantalla.jpg",
+        "images/15_Cerradora.jpg",
+        "images/16_Elastiquera.jpg",
+        "images/17_MaquinaDePespunte.jpg",
+        "images/18_Collarin.jpg",
+        "images/19_DosAgujas.jpg",
+        "images/20_DobleArrastre.jpg",
+        "images/21_TripleArrastre.jpg",
+        "images/22_PuntadaInvisible.jpg",
+        "images/23_ZigZag.jpg",
+        "images/23_PlanchaIndustria.jpg",
+        "images/25_Bastera.jpg",
+        "images/26_Atracadora.jpg",
+        "images/27_CerradoraCodo.jpg",
+        "images/28_Calderas.jpg",
+        "images/29_Pretinera.jpg",
+        "images/30_Enconadora.jpg",
+        "images/31_Dobladilladora.jpg"
+      ]; 
+    
+     /** var dirfotos=[
+        "images/0.png","images/1.png","images/2.png","images/3.jpg","images/4.gif","images/5.jpg","images/6.png","images/7.jpg","images/8.jpg","images/9.jpg",
+        "images/10.jpg","images/11.jpg","images/12.jpg","images/13.jpg","images/14.jpg","images/15.jpeg","images/16.jpg","images/17.jpg","images/18.png","images/19.jpg",
+        "images/20.jpg","images/21.png","images/22.jpg","images/23.jpg","images/24.jpg","images/25.jpg","images/26.png","images/27.jpg","images/28.jpeg","images/29.jpg",
+        "images/30.png","images/31.jpg","images/32.jpg","images/33.jpg","images/34.jpg","images/35.png","images/36.png","images/37.jpg","images/38.jpg","images/39.png",
+        "images/40.png","images/41.png","images/42.png","images/43.jpg","images/44.jpg","images/45.jpg","images/46.jpg","images/47.jpg","images/48.jpg","images/49.jpg",
+        "images/50.jpg","images/51.jpg","images/52.jpg","images/53.jpg","images/54.jpg","images/55.jpg","images/56.png","images/57.jpg","images/58.jpg","images/59.png",
+        "images/60.jpg","images/61.jpg","images/62.gif","images/63.png","images/64.jpg","images/65.jpg","images/66.jpg","images/67.jpg","images/68.jpg","images/69.jpg",
+        "images/70.jpg","images/71.jpg","images/72.jpg","images/73.jpg","images/74.jpg","images/75.jpg","images/76.jpg","images/77.gif","images/78.jpg","images/79.jpg",
+        "images/80.jpg","images/81.jpg","images/82.jpg","images/83.jpg","images/84.png","images/85.gif","images/86.gif","images/87.jpg","images/88.jpg","images/89.jpg",
+        "images/90.jpg","images/91.jpg","images/92.jpeg","images/93.jpg","images/94.jpg","images/95.png","images/96.png","images/97.jpg","images/98.jpg","images/99.jpg"
+      ]; 
+      **/
+      var posix=[
+        0,0,0,0,0,0,0,0,0,0,
+        0,0,0,0,0,0,0,0,0,0,
+        0,0,0,0,0,0,0,0,0,0,
+        0
+       ];
+
+       /** ,0,0,0,0,0,0,0,0,0,
+        0,0,0,0,0,0,0,0,0,0,
+        0,0,0,0,0,0,0,0,0,0,
+        0,0,0,0,0,0,0,0,0,0,
+        0,0,0,0,0,0,0,0,0,0,
+        0,0,0,0,0,0,0,0,0,0,
+        0,0,0,0,0,0,0,0,0,0
+      ];**/
+      
+      var posiy=[
+        0,0,0,0,0,0,0,0,0,0,
+        0,0,0,0,0,0,0,0,0,0,
+        0,0,0,0,0,0,0,0,0,0,
+        0
+        /**
+        ,0,0,0,0,0,0,0,0,0,
+        0,0,0,0,0,0,0,0,0,0,
+        0,0,0,0,0,0,0,0,0,0,
+        0,0,0,0,0,0,0,0,0,0,
+        0,0,0,0,0,0,0,0,0,0,
+        0,0,0,0,0,0,0,0,0,0,
+        0,0,0,0,0,0,0,0,0,0  **/
+
+      ];
+      
+      
+      var Escalagraf=[
+        1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,
+        1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,
+        1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,
+        1.5
+/**
+        ,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,
+        1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,
+        1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,
+        1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,
+        1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,
+        1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,
+        1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5 **/
+      ];
+      
+      var posiz=[
+        0,0,0,0,0,0,0,0,0,0,
+        0,0,0,0,0,0,0,0,0,0,
+        0,0,0,0,0,0,0,0,0,0,
+        0
+
+        /** ,0,0,0,0,0,0,0,0,0,
+        0,0,0,0,0,0,0,0,0,0,
+        0,0,0,0,0,0,0,0,0,0,
+        0,0,0,0,0,0,0,0,0,0,
+        0,0,0,0,0,0,0,0,0,0,
+        0,0,0,0,0,0,0,0,0,0,
+        0,0,0,0,0,0,0,0,0,0 **/
+      ];
+      
+      
+      
+      /*global photos*/
+      photos = dirfotos.map(Image.load); 
+      
+     
+      // Crear objeto video, lee la camara, pone la imagen de la 
+      // camara en el objeto video. pero no se muestra
+      var video = document.createElement('video');
+      video.width = 640; 
+      video.height = 480; 
+      video.loop = true;
+      video.volume = 0;
+      video.autoplay = true;
+      video.style.display = 'none';
+      video.controls = true;
+      navigator.webkitGetUserMedia({'video': true},
+        function(stream) {
+          var url = webkitURL.createObjectURL(stream);
+          video.src = url;
+        },
+        function(error) { alert('Usted no tiene WebRTC webcam'); }
+      );
+      
+      
+      //**********canvas para imagen a leer tags
+      var canvas = document.createElement('canvas');
+      canvas.width = video.width;
+      canvas.height = video.height;
+      canvas.style.display = 'block';
+      
+      
+      //**********Parametros JSARToolKit
+      var raster = new NyARRgbRaster_Canvas2D(canvas); //Objeto raster a partir del objeto canvas
+      var param = new FLARParam(640,480); // Variable de parametros en cuadro 640 x480
+      var detector = new FLARMultiIdMarkerDetector(param, 80); //80? variable de deteccion multiple.
+      var resultMat = new NyARTransMatResult(); //Variable de matriz de resultados
+      detector.setContinueMode(true); //detector de tags
+      var ctx = canvas.getContext('2d'); //Contexto 2D de canvas.
+      
+    
+      //***********Otro canvas para mostrar gráficas y video
+      var glCanvas = document.createElement('canvas');
+      glCanvas.width = video.width;
+      glCanvas.height = video.height;
+      document.body.appendChild(glCanvas);
+      
+      
+      display = new Magi.Scene(glCanvas);
+      display.drawOnlyWhenChanged = true;
+      param.copyCameraMatrix(display.camera.perspectiveMatrix, 10, 10000);
+      display.camera.useProjectionMatrix = true;
+    
+    
+    
+      //*********Crea canvas para superponer imagenes
+      var videoCanvas = document.createElement('canvas');
+      videoCanvas.width = video.width;
+      videoCanvas.height = video.height;
+      
+      var videoTex = new Magi.FlipFilterQuad();
+      videoTex.material.textures.Texture0 = new Magi.Texture();
+      videoTex.material.textures.Texture0.image = videoCanvas;
+      videoTex.material.textures.Texture0.generateMipmaps = false;
+      display.scene.appendChild(videoTex);
+    
+    
+    
+      var times = []; // Variable
+      var pastResults = {}; // Variable
+      var lastTime = 0; // Variable
+      var cubes = {}; // Variable
+      var images = []; // Variable
+      var mostraridb = [];
+     
+    
+      window.updateImage = function() {
+        display.changed = true;
+      }
+
+        
+      setInterval(function(){
+        if (video.ended) video.play();
+        if (video.paused) return;
+        if (window.paused) return;
+        if (video.currentTime == video.duration) {
+          video.currentTime = 0;
+        }
+        if (video.currentTime == lastTime) return;
+        lastTime = video.currentTime;
+        videoCanvas.getContext('2d').drawImage(video,0,0); //superpone la imagen de camara en video canvas
+        ctx.drawImage(videoCanvas, 0,0,640,480);   //320,240);
+      
+    
+        videoTex.material.textures.Texture0.changed = true;
+    
+        canvas.changed = true;
+        display.changed = true;
+    
+    
+        //Proceso de deteccion de marcadores currId es el
+        //Numero de marcador
+        var threshold = 170;
+        var detected = detector.detectMarkerLite(raster, threshold); 
+        for (var idx = 0; idx<detected; idx++) {
+          var id = detector.getIdMarkerData(idx);
+          var currId;
+          
+          if (id.packetLength > 4) {
+            currId = -1;
+          }else{
+            currId=0;
+            for (var i = 0; i < id.packetLength; i++ ) {
+              currId = (currId << 8) | id.getPacketData(i);
+            }
+          }
+          //mostraridb[idx]=currId;
+          if (!pastResults[currId]) {
+            pastResults[currId] = {};
+          }
+          detector.getTransformMatrix(idx, resultMat);
+          pastResults[currId].age = 0;
+          pastResults[currId].transform = Object.asCopy(resultMat);
+        
+        }
+        if (currId==6) {
+          $('#seis').html('<div class="jumbotron"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis hic incidunt, voluptates vero facere aspernatur dicta quisquam iure totam autem laboriosam, sit sint at. Molestiae mollitia adipisci iusto fugit perspiciatis? <img src="http://www.regalomagico.com/13-53-large/gool.jpg"> <iframe width="420" height="315"src="https://www.youtube.com/embed/XGSy3_Czz8k"></iframe></div>')
+        } else{
+          console.log(currId);
+
+        }
+
+
+        
+        
+        //** quita figura cuando se retira tag *************************
+        for (var i in pastResults) {
+          var r = pastResults[i];
+          if (r.age > 1) {
+            delete pastResults[i];
+            //cubes[i].image.setImage(photos.rotate());
+          }
+          r.age++;
+        }
+        
+        
+        for (var i in cubes) cubes[i].display = false;
+        for (var i in pastResults) {
+         
+          //solo se ejecuta cuando logra leer un tag nuevo no visto antes, y se le asigna un foto
+          if (!cubes[i]) {  
+            var pivot = new Magi.Node();
+            pivot.transform = mat4.identity();
+            pivot.setScale(80);
+            var image = new Magi.Image();
+              image
+              .setAlign(image.centerAlign, image.centerAlign)
+              .setPosition(posix[i], posiy[i], posiz[i])
+              .setAxis(0,0,1)
+              .setAngle(Math.PI)
+              .setSize(Escalagraf[i]);
+            image.setImage = function(src) {
+              var img = E.canvas(320,320);//640,640. Tamaño de la foto a superpner en el tag
+              Magi.Image.setImage.call(this, img);
+              this.texture.generateMipmaps = false;
+              var self = this;
+              src.onload = function(){
+                var w = this.width, h = this.height;
+                var f = Math.min(320/w, 320/h);//640,640
+                w = (w*f);
+                h = (h*f);
+                img.getContext('2d').drawImage(this, (320-w)/2,(320-h)/2,w,h);//640, 640
+                self.texture.changed = true;
+                self.setSize(1.1*Math.max(w/h, h/w));
+              };
+              if (Object.isImageLoaded(src)) {
+                src.onload();
+              }
+            };
+            
+            image.setImage(photos[i]);
+            images.push(image);
+            pivot.image = image;
+            pivot.appendChild(image);
+            display.scene.appendChild(pivot);
+            cubes[i] = pivot;
+           
+          }
+          
+          
+          cubes[i].display = true;
+          var mat = pastResults[i].transform;
+          var cm = cubes[i].transform;
+          cm[0] = mat.m00;
+          cm[1] = -mat.m10;
+          cm[2] = mat.m20;
+          cm[3] = 0;
+          cm[4] = mat.m01;
+          cm[5] = -mat.m11;
+          cm[6] = mat.m21;
+          cm[7] = 0;
+          cm[8] = -mat.m02;
+          cm[9] = mat.m12;
+          cm[10] = -mat.m22;
+          cm[11] = 0;
+          cm[12] = mat.m03;
+          cm[13] = -mat.m13;
+          cm[14] = mat.m23;
+          cm[15] = 1;
+        }
+      }, 15);
+  
+    </script>
+    
+
+
+
+  <div id="seis"></div>    
+  </body>
+</html>
+
+
+
+
