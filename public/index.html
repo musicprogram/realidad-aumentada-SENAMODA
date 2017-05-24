@@ -45,7 +45,7 @@
     
     <style>
       html {
-        background: #238276;
+        background: #e2e2e2;
         color: black;
         font-style: arial;
       }
@@ -59,9 +59,7 @@
         font-size: 30px;
         font-weight: bold;
       }
-      canvas{
-        padding: 10px 10px 10px 10px;
-      }
+ 
       .sep{
         padding: 5px 0px 5px 0px;
       }
@@ -74,10 +72,7 @@
   
   <body>
   
-  <div class="container-fluid">
-    <img class="img-responsive sep" src="images/baner.gif"></img>
-  </div>
-    
+  <h1 class="h2">SENAMODA  <b>2017</b> </h1>
 
 
 
@@ -171,7 +166,7 @@
       video.controls = true;
       navigator.webkitGetUserMedia({'video': true},
         function(stream) {
-          var url = webkitURL.createObjectURL(stream);
+          var url = window.webkitURL.createObjectURL(stream);
           video.src = url;
         },
         function(error) { alert('Usted no tiene WebRTC webcam'); }
@@ -244,8 +239,7 @@
         if (video.currentTime == lastTime) return;
         lastTime = video.currentTime;
         videoCanvas.getContext('2d').drawImage(video,0,0); //superpone la imagen de camara en video canvas
-        ctx.drawImage(videoCanvas, 0,0,640,480);   //320,240);
-      
+        ctx.drawImage(videoCanvas, 0,0,640,480);  //  640,480); 
     
         videoTex.material.textures.Texture0.changed = true;
     
@@ -344,7 +338,7 @@
           if (!cubes[i]) {  
             var pivot = new Magi.Node();
             pivot.transform = mat4.identity();
-            pivot.setScale(80);
+            pivot.setScale(80); // #################ojo estaba en 80
             var image = new Magi.Image();
               image
               .setAlign(image.centerAlign, image.centerAlign)
@@ -359,7 +353,7 @@
               var self = this;
               src.onload = function(){
                 var w = this.width, h = this.height;
-                var f = Math.min(320/w, 320/h);//640,640
+                var f = Math.min(320/w,320/h);//640,640
                 w = (w*f);
                 h = (h*f);
                 img.getContext('2d').drawImage(this, (320-w)/2,(320-h)/2,w,h);//640, 640
