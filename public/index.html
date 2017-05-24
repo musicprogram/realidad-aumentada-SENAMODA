@@ -72,6 +72,13 @@
       .video {
         padding: 5px 5px 5px 5px;
       }
+      
+      .img-thumbnail{
+        width: 500px;
+        height: 400px;
+      }
+
+
     </style>
   </head>
   
@@ -131,7 +138,17 @@
           "images/20_10.png",
           "images/20_11.png",
           "images/20_12.png",
-          "images/0-3-60negropecasblancas1.png","images/0-4-60flores1.png","images/0-10-70chachetahabana.png","images/0-11-70vestidocafe.png","images/0-20-80vestidorojo1.png","images/0-21-80vestidocieloflores1.png","images/0-22-80vestidonegro1.png","images/0-23-80vestidoamarillo1.png","images/0-24-80vestidoverde1.png","images/0-25-80vestidoazulclaropuntos.png","images/0-30-90camisaazufaldalflores.png"
+          "images/0-3-60negropecasblancas1.png",
+          "images/0-4-60flores1.png",
+          "images/0-10-70chachetahabana.png",
+          "images/0-11-70vestidocafe.png",
+          "images/0-20-80vestidorojo1.png",
+          "images/0-21-80vestidocieloflores1.png",
+          "images/0-22-80vestidonegro1.png",
+          "images/0-23-80vestidoamarillo1.png",
+          "images/0-24-80vestidoverde1.png",
+          "images/0-25-80vestidoazulclaropuntos.png",
+          "images/0-30-90camisaazufaldalflores.png"
         ]; 
     
 
@@ -302,47 +319,125 @@
 /* //-- 0-3 4-7 8-11 12-15 16-19 categorias de tag //-- funciones jquery mostrar contenido según tag mostrado */
 
         if (currId == 0) {
-          $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">La industria en los años de la moda en los años 40 y 60 (0)</h4><p class="card-text">Lorem ipsum dolor sit amet,consectetur adipisicing elit,sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat.Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat nonproident,sunt in culpa qui officia deserunt mollit anim id est laborum.</p><img class="img-thumbnail"class="fluid"src="images/moda.jpg"></div></div></div>');
+          $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><img class="img-thumbnail"class="fluid"src="images/moda.jpg"></div></div></div>');
         } else if (currId == 1){
-          $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">La industria en los años de la moda en los años 40 y 60 (1)</h4><p class="card-text">Lorem ipsum dolor sit amet,consectetur adipisicing elit,sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat.Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat nonproident,sunt in culpa qui officia deserunt mollit anim id est laborum.</p><img class="img-thumbnail"class="fluid"src="images/moda.jpg"></div></div></div>');
-
+          $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">La industria en los años de la moda)</h4><img class="img-thumbnail"class="fluid"src="images/moda.jpg"></div></div></div>');
         } else if (currId == 2){
-           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">La industria en los años de la moda en los años 40 y 60 (2)</h4><p class="card-text">Lorem ipsum dolor sit amet,consectetur adipisicing elit,sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat.Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat nonproident,sunt in culpa qui officia deserunt mollit anim id est laborum.</p><img class="img-thumbnail"class="fluid"src="images/moda.jpg"></div></div></div>');
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><img class="img-thumbnail"class="fluid"src="images/moda.jpg"></div></div></div>');
         } else if (currId == 3){
-           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">La industria en los años de la moda en los años 40 y 60 (3)</h4><p class="card-text">Lorem ipsum dolor sit amet,consectetur adipisicing elit,sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat.Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat nonproident,sunt in culpa qui officia deserunt mollit anim id est laborum.</p><img class="img-thumbnail"class="fluid"src="images/moda.jpg"><video width="100%"height="100%"controls class="video"><source src="videos/Historia.mp4"type="video/mp4"></video></div></div></div>');
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/moda.jpg"></div></div></div></div>');
         }else if (currId == 4){
-           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">La industria en los años de la moda en los años 60 y 80 (4)</h4><p class="card-text">Lorem ipsum dolor sit amet,consectetur adipisicing elit,sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat.Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat nonproident,sunt in culpa qui officia deserunt mollit anim id est laborum.</p><img class="img-thumbnail"class="fluid"src="images/6080.jpg"></div></div></div>');
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><img class="img-thumbnail"class="fluid"src="images/6080.jpg"></div></div></div>');
         }else if (currId == 5){
-           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">La industria en los años de la moda en los años 60 y 80 (5)</h4><p class="card-text">Lorem ipsum dolor sit amet,consectetur adipisicing elit,sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat.Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat nonproident,sunt in culpa qui officia deserunt mollit anim id est laborum.</p><img class="img-thumbnail"class="fluid"src="images/6080.jpg"></div></div></div>');
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><img class="img-thumbnail"class="fluid"src="images/6080.jpg"></div></div></div>');
         }else if (currId == 6){
-           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">La industria en los años de la moda en los años 60 y 80 (6)</h4><p class="card-text">Lorem ipsum dolor sit amet,consectetur adipisicing elit,sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat.Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat nonproident,sunt in culpa qui officia deserunt mollit anim id est laborum.</p><img class="img-thumbnail"class="fluid"src="images/6080.jpg"></div></div></div>');
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><img class="img-thumbnail"class="fluid"src="images/6080.jpg"></div></div></div>');
         }else if (currId == 7){
-           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">La industria en los años de la moda en los años 60 y 80 (7)</h4><p class="card-text">Lorem ipsum dolor sit amet,consectetur adipisicing elit,sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat.Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat nonproident,sunt in culpa qui officia deserunt mollit anim id est laborum.</p><img class="img-thumbnail"class="fluid"src="images/6080.jpg"><video width="100%"height="100%"controls class="video"><source src="videos/future.mp4"type="video/mp4"></video></div></div></div>');
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/6080.jpg"></div></div></div></div>');
         }else if (currId == 8){
-           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">La industria en los años de la moda en los años 90 y 2000 (8)</h4><p class="card-text">Lorem ipsum dolor sit amet,consectetur adipisicing elit,sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat.Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat nonproident,sunt in culpa qui officia deserunt mollit anim id est laborum.</p><img class="img-thumbnail"class="fluid"src="images/90s.jpg"></div></div></div>');
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><img class="img-thumbnail"class="fluid"src="images/90s.jpg"></div></div></div>');
         }else if (currId == 9){
-           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">La industria en los años de la moda en los años 90 y 2000 (9)</h4><p class="card-text">Lorem ipsum dolor sit amet,consectetur adipisicing elit,sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat.Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat nonproident,sunt in culpa qui officia deserunt mollit anim id est laborum.</p><img class="img-thumbnail"class="fluid"src="images/90s.jpg"></div></div></div>');
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><img class="img-thumbnail"class="fluid"src="images/90s.jpg"></div></div></div>');
         }else if (currId == 10){
-           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">La industria en los años de la moda en los años 90 y 2000 (10)</h4><p class="card-text">Lorem ipsum dolor sit amet,consectetur adipisicing elit,sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat.Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat nonproident,sunt in culpa qui officia deserunt mollit anim id est laborum.</p><img class="img-thumbnail"class="fluid"src="images/90s.jpg"></div></div></div>');
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><img class="img-thumbnail"class="fluid"src="images/90s.jpg"></div></div></div>');
         }else if (currId == 11){
-           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">La industria en los años de la moda en los años 90 y 2000 (11)</h4><p class="card-text">Lorem ipsum dolor sit amet,consectetur adipisicing elit,sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat.Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat nonproident,sunt in culpa qui officia deserunt mollit anim id est laborum.</p><img class="img-thumbnail"class="fluid"src="images/90s.jpg"><video width="100%"height="100%"controls class="video"><source src="videos/Historia.mp4"type="video/mp4"></video></div></div></div>');
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/90s.jpg"></div></div></div></div>');
         }else if (currId == 12){
-           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">La industria en los años de la moda en los años 2000 y 2010 (12)</h4><p class="card-text">Lorem ipsum dolor sit amet,consectetur adipisicing elit,sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat.Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat nonproident,sunt in culpa qui officia deserunt mollit anim id est laborum.</p><img class="img-thumbnail"class="fluid"src="images/2000s.jpg"></div></div></div>');
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><img class="img-thumbnail"class="fluid"src="images/2000s.jpg"></div></div></div>');
         }else if (currId == 13){
-           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">La industria en los años de la moda en los años 2000 y 2010 (13)</h4><p class="card-text">Lorem ipsum dolor sit amet,consectetur adipisicing elit,sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat.Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat nonproident,sunt in culpa qui officia deserunt mollit anim id est laborum.</p><img class="img-thumbnail"class="fluid"src="images/2000s.jpg"></div></div></div>');
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><img class="img-thumbnail"class="fluid"src="images/2000s.jpg"></div></div></div>');
         }else if (currId == 14){
-           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">La industria en los años de la moda en los años 2000 y 2010 (14)</h4><p class="card-text">Lorem ipsum dolor sit amet,consectetur adipisicing elit,sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat.Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat nonproident,sunt in culpa qui officia deserunt mollit anim id est laborum.</p><img class="img-thumbnail"class="fluid"src="images/2000s.jpg"></div></div></div>');
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><img class="img-thumbnail"class="fluid"src="images/2000s.jpg"></div></div></div>');
         }else if (currId == 15){
-           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">La industria en los años de la moda en los años 2000 y 2010 (15)</h4><p class="card-text">Lorem ipsum dolor sit amet,consectetur adipisicing elit,sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat.Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat nonproident,sunt in culpa qui officia deserunt mollit anim id est laborum.</p><img class="img-thumbnail"class="fluid"src="images/2000s.jpg"><video width="100%"height="100%"controls class="video"><source src="videos/ultimate_banda.mp4"type="video/mp4"></video></div></div></div>');
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/2000s.jpg"></div></div></div></div>');
         }else if (currId == 16){
-           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">La industria en los años de la moda en los años 2020 y 2040 (16)</h4><p class="card-text">Lorem ipsum dolor sit amet,consectetur adipisicing elit,sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat.Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat nonproident,sunt in culpa qui officia deserunt mollit anim id est laborum.</p><img class="img-thumbnail"class="fluid"src="images/2020s.jpeg"></div></div></div>');
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><img class="img-thumbnail"class="fluid"src="images/2020s.jpeg"></div></div></div>');
         }else if (currId == 17){
-           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">La industria en los años de la moda en los años 2020 y 2040 (17)</h4><p class="card-text">Lorem ipsum dolor sit amet,consectetur adipisicing elit,sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat.Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat nonproident,sunt in culpa qui officia deserunt mollit anim id est laborum.</p><img class="img-thumbnail"class="fluid"src="images/2020s.jpeg"></div></div></div>');
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><img class="img-thumbnail"class="fluid"src="images/2020s.jpeg"></div></div></div>');
         }else if (currId == 18){
-           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">La industria en los años de la moda en los años 2020 y 2040 (18)</h4><p class="card-text">Lorem ipsum dolor sit amet,consectetur adipisicing elit,sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat.Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat nonproident,sunt in culpa qui officia deserunt mollit anim id est laborum.</p><img class="img-thumbnail"class="fluid"src="images/2020s.jpeg"></div></div></div>');
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><img class="img-thumbnail"class="fluid"src="images/2020s.jpeg"></div></div></div>');
         }else if (currId == 19){
-           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">La industria en los años de la moda en los años 2020 y 2040 (19)</h4><p class="card-text">Lorem ipsum dolor sit amet,consectetur adipisicing elit,sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat.Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat nonproident,sunt in culpa qui officia deserunt mollit anim id est laborum.</p><img class="img-thumbnail"class="fluid"src="images/2020s.jpeg"><video width="100%"height="100%"controls class="video"><source src="videos/Historia.mp4"type="video/mp4"></video></div></div></div>');
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/2020s.jpeg"></div></div></div></div>');
+        }else if (currId == 20){
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/evo.jpg"></div></div></div></div>');
+        }else if (currId == 21){
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/evo_1.jpg"></div></div></div></div>');
+        }else if (currId == 22){
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/evo_2.jpg"></div></div></div></div>');
         }
+        else if (currId == 23){
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/evo_3.jpg"></div></div></div></div>');
+        }
+         else if (currId == 24){
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/evo_4.jpg"></div></div></div></div>');
+        }else if (currId == 25){
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/evo_5.jpg"></div></div></div></div>');
+        }else if (currId == 26){
+          $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">La industria en los años de la moda)</h4><img class="img-thumbnail"class="fluid"src="images/evo.jpg"></div></div></div>');
+        } else if (currId == 27){
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><img class="img-thumbnail"class="fluid"src="images/moda.jpg"></div></div></div>');
+        } else if (currId == 28){
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/evo_1.jpg"></div></div></div></div>'); 
+        }else if (currId == 29){
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/evo_2.jpg"></div></div></div></div>'); 
+        }else if (currId == 30){
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/evo_3.jpg"></div></div></div></div>'); 
+        }else if (currId == 31){
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/evo_4.jpg"></div></div></div></div>'); 
+        }else if (currId == 32){
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/evo_5.jpg"></div></div></div></div>'); 
+        }else if (currId == 33){
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/2020s.jpeg"></div></div></div></div>');
+        }else if (currId == 34){
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/evo.jpg"></div></div></div></div>');
+        }else if (currId == 35){
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/evo_1.jpg"></div></div></div></div>');
+        }else if (currId == 36){
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/evo_2.jpg"></div></div></div></div>');
+        }else if (currId == 37){
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/2000s.jpeg"></div></div></div></div>');
+        }else if (currId == 38){
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/evo.jpg"></div></div></div></div>');
+        }else if (currId == 39){
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/moda.jpg"></div></div></div></div>');
+        }else if (currId == 40){
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/evo_2.jpg"></div></div></div></div>');
+        }else if (currId == 41){
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/2020s.jpeg"></div></div></div></div>');
+        }else if (currId == 42){
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/evo.jpg"></div></div></div></div>');
+        }else if (currId == 43){
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/evo_1.jpg"></div></div></div></div>');
+        }else if (currId == 44){
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/evo_2.jpg"></div></div></div></div>');
+        }else if (currId == 42){
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/2020s.jpeg"></div></div></div></div>');
+        }else if (currId == 43){
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/evo_8.jpg"></div></div></div></div>');
+        }else if (currId == 44){
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/evo_9.jpg"></div></div></div></div>');
+        }else if (currId == 45){
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/evo_10.jpg"></div></div></div></div>');
+        }else if (currId == 46){
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/moda.jpg"></div></div></div></div>');
+        }else if (currId == 47){
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/evo_10.jpg"></div></div></div></div>');
+        }else if (currId == 48){
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/evo_1.jpg"></div></div></div></div>');
+        }else if (currId == 49){
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/evo_11.jpg"></div></div></div></div>');
+        }else if (currId == 50){
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/evo_2.jpg"></div></div></div></div>');
+        }else if (currId == 51){
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/moda.jpg"></div></div></div></div>');
+        }else if (currId == 52){
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/evo_3.jpg"></div></div></div></div>');
+        }else if (currId == 53){
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/evo_4.jpg"></div></div></div></div>');
+        }else if (currId == 54){
+           $('#mostrar').html('<div class="container"><div class="card"><div class="card-header">SENAMODA<b>CFDCM</b></div><div class="card-block"><h4 class="card-title">Historia de la moda</h4><div class=""><img class="img-thumbnail"class="fluid"src="images/evo_6.jpg"></div></div></div></div>');
+        }
+
 
 
         
@@ -444,14 +539,6 @@
     </div>
     <div class="card-block">
       <h4 class="card-title">La industria en los años</h4>
-      <p class="card-text">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
         <img class="img-thumbnail" class="fluid" src="images/moda.jpg">
         <video width="100%" height="100%" controls class="video">
         <source src="videos/Historia.mp4" type="video/mp4">
