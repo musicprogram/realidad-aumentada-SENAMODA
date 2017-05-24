@@ -45,7 +45,7 @@
     
     <style>
       html {
-        background: #238276;
+        background: #e2e2e2;
         color: black;
         font-style: arial;
       }
@@ -59,10 +59,12 @@
         font-size: 30px;
         font-weight: bold;
       }
+
       canvas{
-        padding: 10px 10px 10px 10px;
-        he
+        padding: 5px 5px 5px 5px;
+  
       }
+
       .sep{
         padding: 5px 0px 5px 0px;
       }
@@ -75,10 +77,7 @@
   
   <body>
   
-  <div class="container-fluid">
-    <img class="img-responsive sep" src="images/baner.gif"></img>
-  </div>
-    
+  <h1 class="h2">SENAMODA  <b>2017</b> </h1>
 
 
 
@@ -86,55 +85,75 @@
     <script>
 
         dirfotos=[
-        "images/1_Ojaladora.jpg",
-        "images/2_Plana.jpg",
-        "images/3_Recubridora.jpg",
-        "images/4_Fileteadora.jpg",
-        "images/5_Botonadora.jpg",
-        "images/6_Fileteadora2.jpg",
-        "images/7_CortadoraCNC.png",
-        "images/8_Extendedora.jpg",
-        "images/9_TejedoraUnCabezal.jpg",
-        "images/10_Banda.jpg",
-        "images/11_Aguja.jpg",
-        "images/12_Hilo.jpg",
-        "images/13_Bordadora.jpg",
-        "images/14_Pantalla.jpg",
-        "images/15_Cerradora.jpg",
-        "images/16_Elastiquera.jpg",
-        "images/17_MaquinaDePespunte.jpg",
-        "images/18_Collarin.jpg",
-        "images/19_DosAgujas.jpg",
-        "images/20_DobleArrastre.jpg",
-        "images/21_TripleArrastre.jpg",
-        "images/22_PuntadaInvisible.jpg",
-        "images/23_ZigZag.jpg",
-        "images/23_PlanchaIndustria.jpg",
-        "images/25_Bastera.jpg",
-        "images/26_Atracadora.jpg",
-        "images/27_CerradoraCodo.jpg",
-        "images/28_Calderas.jpg",
-        "images/29_Pretinera.jpg",
-        "images/30_Enconadora.jpg",
-        "images/31_Dobladilladora.jpg"
-      ]; 
+
+          "images/50_1.png",
+          "images/50_2.png",
+          "images/50_3.png",
+          "images/50_4.png",
+          "images/50_5.png",
+          "images/50_6.png",
+          "images/50_7.png",
+          "images/60_1.png",
+          "images/60_2.png",
+          "images/60_3.png",
+          "images/60_4.png",
+          "images/60_5.png",
+          "images/60_6.png",
+          "images/60_7.png",
+          "images/60_8.png",
+          "images/60_9.png",
+          "images/80_1.png",
+          "images/80_2.png",
+          "images/80_3.png",
+          "images/80_4.png",
+          "images/80_5.png",
+          "images/80_6.png",
+          "images/80_7.png",
+          "images/80_8.png",
+          "images/90_1.png",
+          "images/90_2.png",
+          "images/90_3.png",
+          "images/90_4.png",
+          "images/90_5.png",
+          "images/90_6.png",
+          "images/90_7.png",
+          "images/90_8.png",
+          "images/90_9.png",
+          "images/20_1.png",
+          "images/20_2.png",
+          "images/20_3.png",
+          "images/20_4.png",
+          "images/20_5.png",
+          "images/20_6.png",
+          "images/20_7.png",
+          "images/20_8.png",
+          "images/20_9.png",
+          "images/20_10.png",
+          "images/20_11.png",
+          "images/20_12.png",
+          "images/0-3-60negropecasblancas1.png","images/0-4-60flores1.png","images/0-10-70chachetahabana.png","images/0-11-70vestidocafe.png","images/0-20-80vestidorojo1.png","images/0-21-80vestidocieloflores1.png","images/0-22-80vestidonegro1.png","images/0-23-80vestidoamarillo1.png","images/0-24-80vestidoverde1.png","images/0-25-80vestidoazulclaropuntos.png","images/0-30-90camisaazufaldalflores.png"
+        ]; 
     
 
       var posix=[
         0,0,0,0,0,0,0,0,0,0,
         0,0,0,0,0,0,0,0,0,0,
         0,0,0,0,0,0,0,0,0,0,
-        0
+        0,0,0,0,0,0,0,0,0,0,
+        0,0,0,0,0,0,0,0,0,0,
+        0,0,0,0,0,0
+        
        ];
 
       
       
       var posiy=[
-        0,0,0,0,0,0,0,0,0,0,
-        0,0,0,0,0,0,0,0,0,0,
-        0,0,0,0,0,0,0,0,0,0,
-        0
-
+      0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,
+      0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,
+      0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,
+      0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,
+      0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,
+      0.3,0.3,0.3,0.3,0.3,0.3
       ];
       
       
@@ -142,16 +161,18 @@
         1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,
         1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,
         1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,
-        1.5
-
+        1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,
+        1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,
+        1.5,1.5,1.5,1.5,1.5,1.5
       ];
       
       var posiz=[
         0,0,0,0,0,0,0,0,0,0,
         0,0,0,0,0,0,0,0,0,0,
         0,0,0,0,0,0,0,0,0,0,
-        0
-
+        0,0,0,0,0,0,0,0,0,0,
+        0,0,0,0,0,0,0,0,0,0,
+        0,0,0,0,0,0
       ];
       
       
@@ -172,7 +193,7 @@
       video.controls = true;
       navigator.webkitGetUserMedia({'video': true},
         function(stream) {
-          var url = webkitURL.createObjectURL(stream);
+          var url = window.webkitURL.createObjectURL(stream);
           video.src = url;
         },
         function(error) { alert('Usted no tiene WebRTC webcam'); }
@@ -245,8 +266,7 @@
         if (video.currentTime == lastTime) return;
         lastTime = video.currentTime;
         videoCanvas.getContext('2d').drawImage(video,0,0); //superpone la imagen de camara en video canvas
-        ctx.drawImage(videoCanvas, 0,0,640,480);   //320,240);
-      
+        ctx.drawImage(videoCanvas, 0,0,640,480);  //  640,480); 
     
         videoTex.material.textures.Texture0.changed = true;
     
@@ -345,7 +365,7 @@
           if (!cubes[i]) {  
             var pivot = new Magi.Node();
             pivot.transform = mat4.identity();
-            pivot.setScale(80);
+            pivot.setScale(1000); // #################ojo estaba en 80
             var image = new Magi.Image();
               image
               .setAlign(image.centerAlign, image.centerAlign)
@@ -360,7 +380,7 @@
               var self = this;
               src.onload = function(){
                 var w = this.width, h = this.height;
-                var f = Math.min(320/w, 320/h);//640,640
+                var f = Math.min(320/w,320/h);//640,640
                 w = (w*f);
                 h = (h*f);
                 img.getContext('2d').drawImage(this, (320-w)/2,(320-h)/2,w,h);//640, 640
